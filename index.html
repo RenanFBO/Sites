@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dia dos Namorados</title>
+    <style>
+        body {
+            background-color: #ffcccc;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            color: #ff6666;
+        }
+        p {
+            font-size: 20px;
+            color: #ff9999;
+        }
+        .heart {
+            position: absolute;
+            bottom: 0;
+            font-size: 30px;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Dia dos Namorados!</h1>
+    <p>Querida Leticia,</p>
+    <p>Quero que você saiba o quanto você é especial para mim. Não apenas hoje, no Dia dos Namorados, mas todos os dias.</p>
+    <p>Com amor,</p>
+    <p>Renan</p>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+    <div style="position: absolute; bottom: 0; width: 100%; text-align: center;">
+        <a href='file:///C:/Users/CPD/OneDrive/Paginas%20HTML/presente.html'>Você ganhou um presente, clique aqui!!</a>
+    </div>
+</body>
+</html>
